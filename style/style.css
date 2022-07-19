@@ -1,0 +1,150 @@
+/*--------
+  fonts
+ --------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lobster&family=Poppins:wght@500&display=swap");
+
+/*------------------------
+ common style o utilities 
+ ------------------------- */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f1ff;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-players {
+  margin-bottom: 30px;
+}
+.container {
+  background-color: #ffffff;
+  width: 870px;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 21px;
+}
+hr {
+  border: 1px Solid #d1d1d1;
+  margin-bottom: 30px;
+}
+/* -------------------
+top players style 
+--------------------- */
+.section-title {
+  color: #562eff;
+  font-size: 24px;
+  margin-top: 3px;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 30px;
+}
+.player {
+  display: flex;
+  align-items: center;
+}
+.player img {
+  width: 56px;
+  height: 56px;
+}
+.player-name {
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+/*----------------
+ top blogs styles
+ -----------------  */
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 20px;
+}
+.blog {
+  display: flex;
+}
+.blog .thumbnail img {
+  height: 117px;
+  width: 177px;
+}
+.blog-info {
+  margin-left: 16px;
+}
+.blog-titile {
+  font-size: 20px;
+}
+.blog-athour {
+  color: #9f9f9f;
+  font-size: 16px;
+}
+.blog-athour a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #562eff;
+}
+
+/* ------------------
+    latest courses
+-------------------- */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+}
+
+.course .course-banner img {
+  height: 104px;
+  width: 224px;
+}
+.course-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fa-star {
+  font-size: 12px;
+}
+.fa-star.filled {
+  color: #ffc014;
+}
+.fa-star.unfilled {
+  color: #aeaeae;
+}
+
+/*----------------------
+  media queries
+ ----------------------- */
+@media only screen and (max-width: 688px) {
+  h2 {
+    text-align: center;
+  }
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .player,
+  .blog {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 688px) and (max-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+  .container {
+    width: 100%;
+  }
+  .players,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
